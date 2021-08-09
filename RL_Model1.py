@@ -80,7 +80,7 @@ model = build_model(states, actions)
 dqn = build_agent(model, actions)
 dqn.compile(Adam(lr=1e-3), metrics=['mae'])
 
-
+#test the model
 dqn.load_weights('dqn_weights.h5f')
 
 _ = dqn.test(env, nb_episodes=5, visualize=True)
